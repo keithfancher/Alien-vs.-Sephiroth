@@ -72,7 +72,7 @@ void loadSephirothModel()
     sephirothModel = NULL;
   }
 
- 	sephirothModel = new CMD2Data;
+   sephirothModel = new CMD2Data;
   sephirothModel->Load("sephiroth\\tris.md2", "sephiroth\\sephiroth.tga", NULL, NULL, 1.5);
 
   if(sephirothInstance)
@@ -114,7 +114,7 @@ void init()
   glEnable(GL_DEPTH_TEST);  
   
   // load models
-  glEnable(GL_TEXTURE_2D);   	
+  glEnable(GL_TEXTURE_2D);     
   loadAlienModel();
   loadSephirothModel();
   
@@ -131,7 +131,7 @@ void display()
   animateScene(timeElapsed, sephirothInstance, alienInstance);
 
   glFlush();
-	glutSwapBuffers();
+  glutSwapBuffers();
 }
 
 

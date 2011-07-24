@@ -190,11 +190,11 @@ void CMD2Instance::Animate(float seconds)
         m_currentFrame = m_startFrame;
         m_nextFrame = m_currentFrame + 1;
       }
-	  else if (m_nextState == _STATIC)
-	  {
-		  m_currentFrame = m_nextFrame = m_startFrame = m_endFrame;
-		  m_state = _STATIC;
-	  }
+    else if (m_nextState == _STATIC)
+    {
+      m_currentFrame = m_nextFrame = m_startFrame = m_endFrame;
+      m_state = _STATIC;
+    }
       else
       {
         SetAnimation(m_nextState, _REPEAT);
@@ -205,7 +205,7 @@ void CMD2Instance::Animate(float seconds)
   }
 
   if ((m_nextState == _STATIC) && (m_nextFrame == m_startFrame))
-	  m_nextFrame = m_endFrame;
+    m_nextFrame = m_endFrame;
 
   m_pData->Animate(m_currentVerts, m_weaponVerts, m_currentFrame, m_nextFrame, m_interpol);
 }
@@ -455,9 +455,9 @@ bool LoadModel(char *filename, xyz_t* &verts, mesh_t* &tris, texCoord_t* &texCoo
     pVerts = (xyz_t*)&verts[header.numXYZ * j];
     for (i = 0; i < header.numXYZ; i++)
     {
-	  pVerts[i].x = scale * (frame->scale[0] * frame->fp[i].v[0] + frame->translate[0]); 
-	  pVerts[i].z = scale * (frame->scale[1] * frame->fp[i].v[1] + frame->translate[1]); 
-	  pVerts[i].y = scale * (frame->scale[2] * frame->fp[i].v[2] + frame->translate[2]); 
+    pVerts[i].x = scale * (frame->scale[0] * frame->fp[i].v[0] + frame->translate[0]); 
+    pVerts[i].z = scale * (frame->scale[1] * frame->fp[i].v[1] + frame->translate[1]); 
+    pVerts[i].y = scale * (frame->scale[2] * frame->fp[i].v[2] + frame->translate[2]); 
 
       if (j == 0)
       {

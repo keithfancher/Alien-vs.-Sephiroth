@@ -8,9 +8,9 @@
 #define __MD2_H__
 
 
-#include <windows.h>			// standard Windows app include
-#include <gl/gl.h>				// standard OpenGL include
-#include <gl/glu.h>				// OpenGL utilties
+#include <windows.h>      // standard Windows app include
+#include <gl/gl.h>        // standard OpenGL include
+#include <gl/glu.h>        // OpenGL utilties
 
 #include "CTargaImage.h"
 
@@ -54,7 +54,7 @@ typedef struct
 typedef struct
 {
    unsigned char v[3];
-   unsigned char normalIndex;	// not used
+   unsigned char normalIndex;  // not used
 } framePoint_t;
 
 // information for a single frame
@@ -69,14 +69,14 @@ typedef struct
 // data for a single triangle
 typedef struct
 {
-  unsigned short meshIndex[3];		// vertex indices
-  unsigned short stIndex[3];		// texture coordinate indices
+  unsigned short meshIndex[3];    // vertex indices
+  unsigned short stIndex[3];    // texture coordinate indices
 } mesh_t;
 
 typedef struct
 {
-  int ident;		 // identifies as MD2 file "IDP2"
-  int version;	 // mine is 8
+  int ident;     // identifies as MD2 file "IDP2"
+  int version;   // mine is 8
   int skinwidth;    // width of texture
   int skinheight;   // height of texture
   int framesize;    // number of bytes per frame
@@ -126,12 +126,12 @@ public:
   // model animation states
   enum
   {
-	  IDLE,
-	  RUN,
-	  ATTACK,
-	  PAIN1,
-	  PAIN2,
-	  PAIN3,
+    IDLE,
+    RUN,
+    ATTACK,
+    PAIN1,
+    PAIN2,
+    PAIN3,
     JUMP,
     FLIPOFF,
     SAULTE,
@@ -148,7 +148,7 @@ public:
     DEATH3,
     _REPEAT,
     _CUSTOM,
-	_STATIC
+  _STATIC
   };
 
 protected:
